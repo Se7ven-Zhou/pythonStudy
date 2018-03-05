@@ -15,24 +15,43 @@ import requests
 # print(result.json())    # 返回Json格式（字典dict类型）
 #
 # print(content['msg'])
+"""我写的"""
+# class Requests:
+#     def __init__(self,mobilephone,pwd):
+#         self.mobile = mobilephone
+#         self.password = pwd
+#         self.url = url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
+#
+#     def Get(self):
+#         # url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
+#         params = {"mobilephone":self.mobile,"pwd":self.password}
+#         response = requests.get(self.url,params)
+#         return response.json()
+#
+#     def Post(self):
+#         params = {"mobilephone":self.mobile,"pwd":self.password}
+#         response = requests.get(url,params)
+#         return response.json()
 
-class Requests:
-    def __init__(self,mobilephone,pwd):
-        self.mobile = mobilephone
-        self.password = pwd
-        self.url = url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
+"""老师写的"""
+
+class HttpRrequsts:
+
+    def __init__(self,url,params):
+        self.url = url
+        self.params = params
 
     def Get(self):
-        # url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
-        params = {"mobilephone":self.mobile,"pwd":self.password}
-        req = requests.get(self.url,params)
-        return req.json()
+        response = requests.get(url,params)
+        return response.json()
 
     def Post(self):
-        params = {"mobilephone":self.mobile,"pwd":self.password}
-        req = requests.get(url,params)
-        return req.json()
+        response = requests.post(url,params)
+        return response.json()
 
-get = Requests("13100000000","123456")
-result = get.Get()
-print(result)
+if __name__ == "__main__":
+    url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
+    params = {"mobilephone":"13752852018","pwd":"123456"}
+    tester = HttpRrequsts(url,params)
+    test = tester.Get()
+    print(test)
