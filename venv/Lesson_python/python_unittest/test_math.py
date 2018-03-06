@@ -15,7 +15,7 @@ class test_mathTest(unittest.TestCase):
         print(result.add())
 
     def test_add_two_nagetive(self):    # 必须用test开头
-        result = mathTest(-2,-3)
+        result = mathTest(-2)
         print(result.add())
 
     def tearDown(self):     # 结束
