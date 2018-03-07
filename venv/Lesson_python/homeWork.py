@@ -39,7 +39,7 @@
 
 with open("test.txt","r") as file:
     f = file.readlines()
-
-    for item in range(0,len(f)):
-        (f[item].split(","))
+    f_list =[]
+    for item in range(0,len(f)-1):
+        f_list = f[item].split(",")
 
