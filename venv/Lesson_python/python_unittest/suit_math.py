@@ -28,7 +28,7 @@ suite = unittest.TestSuite()
 loader = unittest.TestLoader()
 suite.addTest(loader.loadTestsFromTestCase(test_mathTest))
 
-# 执行用例
+# 执行用例，生成txt报告
 with open("test.txt","w+") as f:
-    runner = unittest.TextTestRunner(stream=f, descriptions="测试成功", verbosity=2)  # 创建一个执行用例的实例
-    runner.run(suite)   # 调用run方法执行suite用例
+     runner = unittest.TextTestRunner(stream=f, descriptions="测试成功", verbosity=2)  # 创建一个执行用例的实例
+     runner.run(suite)   # 调用run方法执行suite用例
