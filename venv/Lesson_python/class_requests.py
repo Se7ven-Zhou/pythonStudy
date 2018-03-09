@@ -50,6 +50,9 @@ class HttpRrequsts:
         return response.json()
 
 if __name__ == "__main__":
+
+
+
     url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
     params = {"mobilephone":"13752852018","pwd":"123456"}
     tester = HttpRrequsts(url,params)

@@ -15,7 +15,32 @@ class httpRequests:
         result = requests.get(self.url,self.params)
         return result.json()
 
+class Read_data:
+    def read_data(self,file_path):
+        with open(file_path, "r") as file:
+            f = file.readlines()
+            data_list = []
+            file_dict = {}
+            for item in range(0, len(f)):
+                f_list = f[item].split(",")
+                # print(f_list)
+                for j in range(0, len(f_list)):
+                    data = f_list[j].split(":", 1)  # 切割可以输入第几个符号切割
+                    file_dict[data[0]] = data[1]
+                data_list.append(file_dict)
+        return data_list
+
+
 if __name__ == "__main__":
-    test = httpRequests("13752852018","123456")
-    runner = test.Get()
-    print(runner)
+    # 参数实例化
+    data = Read_data()
+    data_test = data.read_data("test.txt")
+    print(data_test[0]["mobilephone"])
+    print(data_test)
+    # 实例化运行
+    for item in range(0,len(data_test)):
+        test = httpRequests(data_test[item]["mobilephone"],data_test[item]["pwd"])
+        runner = test.Get()
+        #print(item)
+        #print(data_test[0]["mobilephone"])
+        #print(runner)

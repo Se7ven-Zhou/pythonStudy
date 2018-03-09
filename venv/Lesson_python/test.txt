@@ -1,2 +1,0 @@
-url:http://119.23.241.154:8080/futureloan/mvc/api/member/login,mobilephone:13752852018,pwd:123456
-url:http://119.23.241.154:8080/futureloan/mvc/api/member/login,mobilephone:15123645350,pwd:234555

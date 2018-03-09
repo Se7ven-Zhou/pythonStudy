@@ -37,9 +37,36 @@
 #     print(dict_list)
 
 
-with open("test.txt","r") as file:
+with open("zj.txt","r") as file:
     f = file.readlines()
-    f_list =[]
-    for item in range(0,len(f)-1):
+    data_list =[]
+    file_dict = {}
+    for item in range(0,len(f)):
         f_list = f[item].split(",")
+        for j in range(0,len(f_list)):
+            data = f_list[j].split(":",1) # 切割可以输入第几个符号切割
+            file_dict[data[0]] = data[1]
+            print(f_list[j])
+        data_list.append(file_dict)
+print(data_list)
 
+print(data_list[0]["url"])
+
+# class Read_data:
+#     def read_data(self,file_path):
+#         with open(file_path, "r") as file:
+#             f = file.readlines()
+#             data_list = []
+#             file_dict = {}
+#             for item in range(0, len(f)):
+#                 f_list = f[item].split(",")
+#                 # print(f_list)
+#                 for j in range(0, len(f_list)):
+#                     data = f_list[j].split(":", 1)  # 切割可以输入第几个符号切割
+#                     file_dict[data[0]] = data[1]
+#                 data_list.append(file_dict)
+#         return data_list
+#
+# sl = Read_data()
+# tt = sl.read_data("zj.txt")
+# print(tt)
