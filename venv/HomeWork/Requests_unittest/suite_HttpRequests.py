@@ -2,6 +2,7 @@
 
 import unittest
 from HomeWork.Requests_unittest.test_HttpRequests import Test_HttpRequests
+from HomeWork.Requests_unittest.test_HttpRequests import Read_data
 import HTMLTestRunnerNew
 import time
 

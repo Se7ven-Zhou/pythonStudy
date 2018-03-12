@@ -21,7 +21,7 @@
 
 """读取文件，list=[{key:value,key:value},{key:value,key:value}] 格式"""
 
-# with open("D:\\Python27\\Case\Test\\pythonStudy\\test.txt", "r") as file:
+# with open("zj.txt", "r") as file:
 #     content = file.read()
 #     content_list = content.split("\n")
 #     dict_list = []
@@ -29,7 +29,9 @@
 #
 #     for item in range(0, len(content_list)):
 #         content_split = content_list[item].split(",")
+#         print(content_split)
 #         for i in range(0, len(content_split)):
+#             # print(content_split[i])
 #             dict_key = content_split[i][0:content_split[i].index(":")]
 #             dict_value = content_split[i][content_split[i].index(":") + 1:]
 #             dict[dict_key] = dict_value
@@ -40,17 +42,17 @@
 with open("zj.txt","r") as file:
     f = file.readlines()
     data_list =[]
-    file_dict = {}
     for item in range(0,len(f)):
         f_list = f[item].split(",")
+        file_dict = {}
         for j in range(0,len(f_list)):
             data = f_list[j].split(":",1) # 切割可以输入第几个符号切割
             file_dict[data[0]] = data[1]
-            print(f_list[j])
+        # print(file_dict)
         data_list.append(file_dict)
-print(data_list)
-
-print(data_list[0]["url"])
+    print(data_list)
+#
+# print(data_list[0]["url"])
 
 # class Read_data:
 #     def read_data(self,file_path):
