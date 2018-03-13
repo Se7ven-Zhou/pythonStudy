@@ -38,7 +38,6 @@ if __name__ == "__main__":
     # # print(data_test)
     # # 实例化运行
     for item in range(0,len(data_test)):
-
         print(data_test[item])
         print(data_test[item]["mobilephone"])
 
