@@ -9,5 +9,16 @@ from openpyxl import Workbook   # 创建一个工作簿
 # ex.save("hello.xlsx")       # 保存Excel
 
 ex = load_workbook("hello.xlsx")    # 打开一个Excel
-ex.get_sheet_by_name(python)        # 确定sheet表单，定位sheet
-sheet        # 定位位置，来写数据（X、Y行列定位）
+sheet = ex.get_sheet_by_name("python")        # 确定sheet表单，定位sheet
+# sheet.cell(row=2,column=2).value = "two-two"  # 定位位置，来写数据（X、Y行列定位）
+
+ex.save("hello.xlsx")
+
+result = sheet.cell(row=1,column=1).value   # 查看某一单元格的数据
+print(result)
+
+row = sheet.max_row     # 统计有多少行
+col = sheet.max_column  # 统计有多少列
+
+print(row)
+print(col)
