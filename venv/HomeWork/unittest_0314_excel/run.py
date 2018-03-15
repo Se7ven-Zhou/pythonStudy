@@ -13,18 +13,20 @@ class Run:
 
     def Run_suite(self,data):
         suite = unittest.TestSuite()
-
-        for item in range():
-
-
-
+        # 遍历测试用例
+        for item in range(0,len(data)):
+            url = data[item]["url"]
+            tt = data[item]
+            params = tt.pop("url")
             suite.addTest(test_Http_requests("test_register_excel", url, params))
-
 
         now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
         path = "python" + now + ".html"
 
         with open(path, "wb+") as f:
-            runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="HttpRequests单元测试", description=None,
-                                                      tester="Seven")
+            runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
             runner.run(suite)
+
+if __name__ == "__main__":
+    data_test = Read_data("test.xlsx").Get_data()
+    Run().Run_suite(data_test)

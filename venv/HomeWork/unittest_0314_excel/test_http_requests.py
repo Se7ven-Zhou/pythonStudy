@@ -14,6 +14,7 @@ class test_Http_requests(unittest.TestCase):
 
     def test_register_excel(self):
         test = Http_requests(self.url,self.params).Get()
+        self.assertEqual("10001",test["code"],"注册失败")   # 断言
         print(test)
 
     def tearDown(self):
