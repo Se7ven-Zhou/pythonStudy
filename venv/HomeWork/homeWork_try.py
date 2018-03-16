@@ -47,11 +47,13 @@
 # select = input("请选择购买的商品(orange/coconut/water/milk)：")
 # final = AutoBuy(select)
 # print("购买" + str(select) + '成功，找零：' + str(final))
-from openpyxl import load_workbook
 
-file = load_workbook("test.xlsx")
-sheet = file.get_sheet_by_name("python_test")
-test_data_list = []
+"""读取Excel文件，成[{},{}]格式"""
+# from openpyxl import load_workbook
+#
+# file = load_workbook("test.xlsx")
+# sheet = file.get_sheet_by_name("python_test")
+# test_data_list = []
 
 # for i in range(2, sheet.max_row + 1):
 #     params = {}
@@ -71,15 +73,15 @@ test_data_list = []
 # print(test_data_list)
 # file.save("test.xlsx")
 
-""""""
+"""有就写，没有就建Excel写"""
 import os
 from openpyxl import Workbook
 from openpyxl import load_workbook
 
 address = os.getcwd()
 file_name = "test2.xlsx"
-file_path = os.path.join(address, file_name)
-
+file_path = os.path.join(address, file_name
+                         )
 info_list = ["学号", "姓名", "性别", "班级"]
 
 if os.path.exists(file_path):
@@ -96,4 +98,4 @@ else:
     sheet = file_excel.get_sheet_by_name("python_test")
     for item in range(0, len(info_list)):
         sheet.cell(row=1, column=item + 1).value = info_list[item]
-    file_create.save(file_name)
+    file_excel.save(file_name)
