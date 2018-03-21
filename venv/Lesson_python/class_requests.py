@@ -42,19 +42,17 @@ class HttpRrequsts:
         self.params = params
 
     def Get(self):
-        response = requests.get(url,params)
+        response = requests.get(self.url,self.params)
         return response.json()
 
     def Post(self):
-        response = requests.post(url,params)
+        response = requests.post(self.url,self.params)
         return response.json()
 
 if __name__ == "__main__":
 
-
-
-    url = "http://119.23.241.154:8080/futureloan/mvc/api/member/register"
-    params = {"mobilephone":"13752852018","pwd":"123456"}
+    url = "http://119.23.241.154:8080/futureloan/mvc/api/member/login"
+    params = {"mobile":"13752852018","password":"123456"}
     tester = HttpRrequsts(url,params)
     test = tester.Get()
     print(test)
