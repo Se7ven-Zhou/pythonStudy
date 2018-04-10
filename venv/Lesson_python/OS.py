@@ -17,10 +17,11 @@ import os
 """当前目录生成一个文件夹，比如存放测试报告"""
 
 
-now_address = os.getcwd()
-new_address = os.path.join(now_address,"seven")
-if os.path.exists(new_address):  # 判断是否存在
-    print("已经存在！")
-else:
-    print("不存在，创建一个吧！")
-    os.mkdir(new_address) # 创建文件夹
+# now_address = os.getcwd()
+# new_address = os.path.join(now_address,"seven")
+# if os.path.exists(new_address):  # 判断是否存在
+#     print("已经存在！")
+# else:
+#     print("不存在，创建一个吧！")
+#     os.mkdir(new_address) # 创建文件夹
+

@@ -51,7 +51,7 @@ with open("zj.txt","r") as file:
         # print(file_dict)
         data_list.append(file_dict)
     print(data_list)
-#
+
 # print(data_list[0]["url"])
 
 # class Read_data:
