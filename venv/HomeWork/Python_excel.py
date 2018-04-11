@@ -29,11 +29,13 @@ name = ["seven","aslin","eleven","six"]
 """讲文件内容转换成指定格式[{},{}]"""
 file = load_workbook("test.xlsx")
 sheet = file.get_sheet_by_name("python_test")
-params = {}
+params_list = []
+params_dict = {}
 
-for item in range(2,sheet.max_row + 1):
-    params["mobilephone"] = sheet.cell(row=item ,column=2).value
-    params["pwd"] = sheet.cell(row=item, column=3).value
-    print(params)
+for item in range(2,sheet.max_row+1):
+    params_dict[sheet.cell(row=1,column=1).value] = sheet.cell(row=item ,column=1).value
+    params_dict[sheet.cell(row=1,column=2).value] = sheet.cell(row=item, column=2).value
 
+    params_list.append(params_dict)
+print(params_list)
 file.save("test.xlsx")
