@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 
 class Selenium_login:
 
-    def login_qq(self,https):
+    def login_Ke(self,https):
 
         driver = webdriver.Firefox()
         driver.get(https)
@@ -30,6 +30,6 @@ class Selenium_login:
 
 if __name__ == "__main__":
 
-    Selenium_login().login_qq("https://ke.qq.com")
+    Selenium_login().login_Ke("https://ke.qq.com")
 
 
