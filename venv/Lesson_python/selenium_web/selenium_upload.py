@@ -4,7 +4,7 @@ import win32gui
 import win32con
 
 """
-现状spy++ 和 pywin32三方库
+现状spy++ 和 pywin32三方库,
 """
 
 dialog = win32gui.FindWindow("#32770","打开") #（class ,Title ）

@@ -51,6 +51,11 @@ alter.accept()      接受
 alter.dismiss()     拒绝
 alter.text      弹出框的文本
 """
+# 文本框输入
+"""
+a = document.
+"""
+a = document
 
 class Login_test():
 
