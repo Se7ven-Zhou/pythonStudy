@@ -8,9 +8,8 @@ class Login_check:
 
         self.driver = driver
 
-    def Login_pass(self,nickname):
+    def Login_pass(self):
 
         get_nickname_xpath = '//a[@class="user-name"]/span'
         get_nickname = self.driver.find_element_by_xpath(get_nickname_xpath).text
-        assert nickname == get_nickname
-
+        return get_nickname

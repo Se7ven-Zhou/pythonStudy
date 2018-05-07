@@ -14,7 +14,9 @@ Function_login(driver).Login(mobile,password)
 time.sleep(3)
 
 # 验证登录成功
-lc = Login_check(driver).Login_pass("Aslin")
+lc = Login_check(driver).Login_pass()
+username = "Aslin"
+assert lc == username
 
 
 
