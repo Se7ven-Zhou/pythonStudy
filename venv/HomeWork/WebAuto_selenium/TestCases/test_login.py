@@ -6,7 +6,7 @@ from HomeWork.WebAuto_selenium.PageObjects.login_check import Login_check
 import time
 
 # 登录
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 mobile = "13752852018"
 password = "701777xmzj"
 Function_login(driver).Login(mobile,password)

@@ -9,22 +9,28 @@ import unittest
 class Login_test(unittest.TestCase):
 
     def setUp(self):
+
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)
         self.url = "https://www.mi.com/"
 
-
-    def test_login_success(self,mobile,password,username):
-        driver = webdriver.Firefox()
+    def test_login_success(self):
+        # 测试数据
+        mobile = "13752852018"
+        password = "701777xmzj"
+        username = "Se7ven"
         # 步骤
-        Login_page(driver,self.url).Login_function(mobile,password)
-        nickname = Index_page(driver).Login_name()
+        Login_page(self.driver,self.url).Login_function(mobile,password)
+        nickname = Index_page(self.driver).Login_name()
         # 检验
         self.assertEqual(nickname, username)
 
     def test_login_fail(self):
         pass
 
-    # def tearDown(self):
-    #     driver.quit()
+    def tearDown(self):
+        self.driver.quit()
 
 if __name__ == "__main__":
-    Login_test().test_login_success("13752852018","701777xmzj","Se7ven")
+
+    unittest.main()
