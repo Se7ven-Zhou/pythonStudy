@@ -13,7 +13,7 @@ class Login_page:
     def __init__(self,driver,url):
 
         self.driver = driver
-        driver.get(url)
+        self.driver.get(url)
 
     def Login_function(self,mobile,password):
 
