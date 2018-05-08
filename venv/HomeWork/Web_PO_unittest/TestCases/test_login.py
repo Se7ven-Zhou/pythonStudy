@@ -1,8 +1,8 @@
 #coding:utf-8
 
 from selenium import webdriver
-from HomeWork.Web_PO_unittest.PageObject.login_page import Login_page
-from HomeWork.Web_PO_unittest.PageObject.index_page import Index_page
+from HomeWork.Web_PO_unittest.PageObjects.login_page import Login_page
+from HomeWork.Web_PO_unittest.PageObjects.index_page import Index_page
 import time
 import unittest
 
@@ -10,7 +10,7 @@ class Login_test(unittest.TestCase):
 
     def setUp(self):
 
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
         self.url = "https://www.mi.com/"
 
@@ -26,7 +26,15 @@ class Login_test(unittest.TestCase):
         self.assertEqual(nickname, username)
 
     def test_login_fail(self):
-        pass
+        # 测试数据
+        mobile = "13752852018"
+        password = "123456abc"
+        wrong_msg = "用户名或密码不正确"
+        # 步骤
+        Login_page(self.driver, self.url).Login_function(mobile, password)
+        get_wrong_msg = Index_page(self.driver).Login_fail_msg()
+        # 检验
+        self.assertEqual(get_wrong_msg,wrong_msg)
 
     def tearDown(self):
         self.driver.quit()

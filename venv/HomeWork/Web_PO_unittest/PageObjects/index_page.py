@@ -6,6 +6,7 @@ class Index_page:
 
     # 首页xpath定位
     get_nickname_xpath = '//a[@class="user-name"]/span'
+    get_wrong_msg_xpath = '//div[@class="loginbox c_b"]//span[@class="error-con"]'
 
     def __init__(self,driver):
         self.driver = driver
@@ -22,4 +23,5 @@ class Index_page:
         pass
 
     def Login_fail_msg(self):
-        pass
+        get_wrong_msg = self.driver.find_element_by_xpath(self.get_wrong_msg_xpath).text
+        return get_wrong_msg
