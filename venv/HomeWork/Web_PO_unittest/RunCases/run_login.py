@@ -1,6 +1,5 @@
 # coding:utf-8
 
-import time
 import os
 import unittest
 import HTMLTestRunnerNew
@@ -9,7 +8,7 @@ from HomeWork.Web_PO_unittest.PageObjects import login_page
 from HomeWork.Web_PO_unittest.PageObjects import index_page
 from HomeWork.Web_PO_unittest.TestDatas.read_datas import Read_data
 from HomeWork.Web_PO_unittest.TestCases.test_login import Login_test
-
+from HomeWork.Web_PO_unittest.TestReports.get_reports import Get_report
 
 class Run_Cases:
 
@@ -28,16 +27,19 @@ class Run_Cases:
             suite.addTest(Login_test("test_login_success",success_data[item]))
 
         # 生成报告
-        now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
-        report_name = "python" + now + ".html"
+        Get_report().Report()
 
-        with open(report_name, "wb+") as f:
-            runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
-            runner.run(suite)
+        # now = time.strftime("%Y-%m-%d_%H_%M_%S")   # 获取当前时间
+        # report_name = "python" + now + ".html"
+        #
+        # with open(report_name, "wb+") as f:
+        #     runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
+        #     runner.run(suite)
+
 
 if __name__ == "__main__":
 
-    Run_Cases().Run_login("Login_Data.xlsx") 
+    Run_Cases().Run_login("Login_Data.xlsx")
 
 
 
