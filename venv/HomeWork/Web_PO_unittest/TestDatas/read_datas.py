@@ -10,11 +10,12 @@ class Read_data:
         self.file_name = file_name
 
     def Read_login_success(self,sheet_name):
-        address = os.getcwd()
+        address = os.path.dirname(__file__)
         file_path = os.path.join(address,self.file_name)
         file =load_workbook(file_path)
         sheet = file.get_sheet_by_name(sheet_name)
-
+        print(file_path)
+        print(address)
         data_list = []
         for item in range(2,sheet.max_row + 1):
 
@@ -26,4 +27,5 @@ class Read_data:
         return data_list
 
 if __name__ == "__main__":
-    Read_data("Login_Data.xlsx").Read_login_success("login_success")
+   data = Read_data("Login_Data.xlsx").Read_login_success("login_success")
+   print(data)
