@@ -1,0 +1,4 @@
+info信息
+warning信息
+error信息
+critical信息

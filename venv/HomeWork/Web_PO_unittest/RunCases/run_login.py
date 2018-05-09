@@ -37,7 +37,7 @@ class Run_Cases:
 
 if __name__ == "__main__":
 
-    Run_Cases().Run_login("Login_Data.xlsx")
+    Run_Cases().Run_login("Login_Data.xlsx") 
 
 
 

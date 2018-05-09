@@ -1,0 +1,10 @@
+[ERROR]-[2018-04-11 16:26:52,329]-[UnitTest]-[logging_class.py]-[<module>]-日志信息：this is a error infomation!!!
+
+
+[ERROR]-[2018-04-11 16:29:16,570]-[UnitTest]-[logging_class.py]-[logging_connect]-日志信息：manchestser
+[ERROR]-[2018-04-11 16:29:48,769]-[UnitTest]-[logging_class.py]-[logging_connect]-日志信息：name 'a' is not defined
+[ERROR]-[2018-04-11 16:36:10,652]-[UnitTest]-[logging_class.py]-[logging_connect]-日志信息：name 'a' is not defined
+
+
+[ERROR]-[2018-04-11 16:44:42,270]-[UnitTest]-[logging_class.py]-[logging_connect]-日志信息：name 'a' is not defined
+[ERROR]-[2018-04-11 17:01:36,142]-[UnitTest]-[logging_class.py]-[logging_connect]-日志信息：name 'a' is not defined

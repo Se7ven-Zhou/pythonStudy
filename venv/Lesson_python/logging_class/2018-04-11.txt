@@ -1,0 +1,13 @@
+崩溃信息
+[CRITICAL]-2018-04-11 14:59:34,927-python_info-logging_write.py-<module>-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 15:00:21,327]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:06:16,723]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:07:04,473]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+
+
+[CRITICAL]-[2018-04-11 16:07:21,789]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:08:19,477]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:10:36,983]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:20:13,078]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:22:38,841]-[python_info]-[logging_write.py]-[<module>]-日志信息：崩溃信息
+[CRITICAL]-[2018-04-11 16:24:48,376]-[UnitTest]-[logging_write.py]-[<module>]-日志信息：崩溃信息
