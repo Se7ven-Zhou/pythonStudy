@@ -16,7 +16,7 @@ class Login_page:
         self.driver.get(url)
 
     def Login_function(self,mobile,password):
-
+        
         self.driver.find_element_by_xpath(self.login_click_xpath).click()
         self.driver.find_element_by_xpath(self.username_xpath).send_keys(mobile)
         self.driver.find_element_by_xpath(self.password_xpath).send_keys(password)

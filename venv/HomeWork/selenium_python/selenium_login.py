@@ -23,6 +23,9 @@ class Selenium_login:
         # 这个函数一步到位
         # WebDriverWait(driver,10,1).until(EC.frame_to_be_available_and_switch_to_it(iframe_login_name))
 
+        # 滑动到该元素
+        # ele = driver.execute_script("arguments[0].scrollIntoView();",元素)
+
         driver.find_element_by_id("switcher_plogin").click()
         driver.find_element_by_id("u").send_keys("406574570")
         driver.find_element_by_id("p").send_keys("xmzj@701777")

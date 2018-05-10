@@ -4,6 +4,7 @@ from selenium import webdriver
 from HomeWork.Web_PO_unittest.PageObjects.login_page import Login_page
 from HomeWork.Web_PO_unittest.PageObjects.index_page import Index_page
 from HomeWork.Web_PO_unittest.TestDatas import read_datas
+from HomeWork.Web_PO_unittest.TestDatas import CommonData
 import time
 import unittest
 
@@ -17,7 +18,7 @@ class Login_test(unittest.TestCase):
 
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
-        self.url = "https://www.mi.com/"
+        # self.url = "https://www.mi.com/"
 
     def test_login_success(self):
         # 测试数据
@@ -26,7 +27,7 @@ class Login_test(unittest.TestCase):
         username = self.user_info["nickname"]
 
         # 步骤
-        Login_page(self.driver,self.url).Login_function(mobile,password)
+        Login_page(self.driver,CommonData.url).Login_function(mobile,password)
         nickname = Index_page(self.driver).Login_name()
         # 检验
         self.assertEqual(nickname, username)
