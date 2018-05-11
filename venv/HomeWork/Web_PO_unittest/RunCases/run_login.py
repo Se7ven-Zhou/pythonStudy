@@ -2,6 +2,7 @@
 
 import os
 import unittest
+import time
 import HTMLTestRunnerNew
 from selenium import webdriver
 from HomeWork.Web_PO_unittest.PageObjects import login_page
@@ -27,14 +28,14 @@ class Run_Cases:
             suite.addTest(Login_test("test_login_success",success_data[item]))
 
         # 生成报告
-        Get_report().Report()
+        # Get_report().Report()
 
-        # now = time.strftime("%Y-%m-%d_%H_%M_%S")   # 获取当前时间
-        # report_name = "python" + now + ".html"
-        #
-        # with open(report_name, "wb+") as f:
-        #     runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
-        #     runner.run(suite)
+        now = time.strftime("%Y-%m-%d_%H_%M_%S")   # 获取当前时间
+        report_name = "python" + now + ".html"
+
+        with open(report_name, "wb+") as f:
+            runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
+            runner.run(suite)
 
 
 if __name__ == "__main__":

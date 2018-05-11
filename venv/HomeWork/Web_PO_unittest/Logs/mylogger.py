@@ -9,7 +9,7 @@ class Logging:
     def __init__(self):
         pass
 
-    def My_logger(self,message,level):
+    def My_logger(self,message):
 
         # 日志存储信息
         address = os.path.dirname(__file__)
@@ -22,7 +22,7 @@ class Logging:
         # 设置日志输出格式
         formatter = logging.Formatter("[%(levelname)s]-[%(asctime)s]-[%(name)s]-[%(filename)s]-[%(funcName)s]-日志信息：%(message)s")
         fh.setFormatter(formatter)
-        fh.setLevel(level)
+        # fh.setLevel(level)
 
         logger.error(message)
         logger.removeFilter(fh)
@@ -40,4 +40,5 @@ if __name__ == "__main__":
     try:
         a
     except Exception as error:
-        Logging().My_logger(error,"ERROR")
+        Logging().My_logger(error)
+        raise

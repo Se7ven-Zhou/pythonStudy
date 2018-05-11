@@ -68,3 +68,19 @@ Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr
 JavaScript error: https://account.xiaomi.com/pass/userInfoJsonP?userId=0&callback=setLoginInfo_getAccountInfo, line 3: SyntaxError: expected expression, got '<'
 1525857292141	geckodriver	INFO	geckodriver 0.19.1
 1525857292152	geckodriver	INFO	Listening on 127.0.0.1:58155
+1526018912860	geckodriver	INFO	geckodriver 0.19.1
+1526018912874	geckodriver	INFO	Listening on 127.0.0.1:57548
+1526018915942	mozrunner::runner	INFO	Running command: "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ljfzWQgAdxvY"
+1526018916402	Marionette	INFO	Enabled via --marionette
+1526018917616	Marionette	INFO	Listening on port 57556
+1526018917954	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://account.xiaomi.com/pass/userInfoJsonP?userId=0&callback=setLoginInfo_getAccountInfo, line 3: SyntaxError: expected expression, got '<'
+1526018923901	geckodriver	INFO	geckodriver 0.19.1
+1526018923911	geckodriver	INFO	Listening on 127.0.0.1:57629
+1526018927003	mozrunner::runner	INFO	Running command: "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.A0loqiSjCUpo"
+1526018927476	Marionette	INFO	Enabled via --marionette
+1526018928558	Marionette	INFO	Listening on port 57637
+1526018928622	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://account.xiaomi.com/pass/userInfoJsonP?userId=0&callback=setLoginInfo_getAccountInfo, line 3: SyntaxError: expected expression, got '<'
