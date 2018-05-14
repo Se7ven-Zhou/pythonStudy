@@ -11,21 +11,18 @@ import pytest
 
 class Login_test(unittest.TestCase):
 
-    def __init__(self,methodName,user_info):
-        super(Login_test, self).__init__(methodName)
-        self.user_info = user_info
-
-    def setUp(self):
-
+    @pytest.mark.smoke
+    def Login_test_pytest(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(10)
-        # self.url = "https://www.mi.com/"
+        self.driver.quit()
 
+    @pytest.mark.smoke
     def test_login_success(self):
         # 测试数据
-        mobile = self.user_info["mobile"]
-        password = self.user_info["password"]
-        username = self.user_info["nickname"]
+        mobile = "13752852018"
+        password = "701777xmzj"
+        username = "Se7ven"
 
         # 步骤
         Login_page(self.driver,CommonData.url).Login_function(mobile,password)
@@ -43,9 +40,6 @@ class Login_test(unittest.TestCase):
     #     get_wrong_msg = Index_page(self.driver).Login_fail_msg()
     #     # 检验
     #     self.assertEqual(get_wrong_msg,wrong_msg)
-
-    def tearDown(self):
-        self.driver.quit()
 
 if __name__ == "__main__":
 

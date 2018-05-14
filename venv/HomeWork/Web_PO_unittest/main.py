@@ -19,9 +19,7 @@ if __name__ == "__main__":
 
     testcase_path = os.getcwd() + "/TestCases" # 测试用例路径
     suite.addTest(loader.discover(testcase_path))  # 加载目录下以test开头的py文件
-    discover = unittest.defaultTestLoader.discover(testcase_path, pattern='test*.py')
 
-    print(discover)
     now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
     report_name = "python" + now + ".html"
 
