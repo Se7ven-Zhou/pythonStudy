@@ -150,3 +150,14 @@ JavaScript error: https://account.xiaomi.com/pass/userInfoJsonP?userId=0&callbac
 Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
 [Child 8984, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 [Child 8984, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+1526355135006	geckodriver	INFO	geckodriver 0.19.1
+1526355135014	geckodriver	INFO	Listening on 127.0.0.1:51605
+1526355138123	mozrunner::runner	INFO	Running command: "D:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-profile" "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\rust_mozprofile.ilkQq94Gq9VX"
+1526355138734	Marionette	INFO	Enabled via --marionette
+1526355139780	Marionette	INFO	Listening on port 51613
+1526355140274	Marionette	WARN	TLS certificate errors will be ignored for this session
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+JavaScript error: https://account.xiaomi.com/pass/userInfoJsonP?userId=0&callback=setLoginInfo_getAccountInfo, line 3: SyntaxError: expected expression, got '<'
+Unable to read VR Path Registry from C:\Users\Administrator\AppData\Local\openvr\openvrpaths.vrpath
+[Child 1520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+[Child 1520, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
