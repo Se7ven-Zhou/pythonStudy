@@ -33,14 +33,21 @@ class Collect_Video:
 
 
     def test_Search_Meeting_NoContent(self):
-        headers = HuShi.Config.params_config.headers
+        signature = HuShi.Config.params_config.signature
+        # token = HuShi.Config.params_config.token
         params_dict = {"searchKey":"","pageNo":1,"pageSize":20}
+        headers = HuShi.Config.params_config.headers
 
-        params = Parameter().Package_params(str(params_dict))
+        params = Parameter().Package_params(str(params_dict),signature)
         url = Environment().Test() + self.api
-        result = requests.post(url,params,headers = headers)
-        print(result.json())
+        try:
+            result = requests.post(url,params,headers = headers)
+            assert result.json()["code"] == "2000021"
+        except Exception as error:
+            info = "AssertionError - " + str(result.json())
+            Logging().Get_Error(info)
+            raise error
 
 if __name__ == "__main__":
 
-    Collect_Video().test_Search_Meeting_Normal()
+    Collect_Video().test_Search_Meeting_NoContent()
