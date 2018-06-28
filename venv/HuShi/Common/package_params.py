@@ -9,19 +9,20 @@ class Parameter:
 
         self.admin = admin
 
-    def get_params(self,params = {},signature = "4caaa6567e7f32d4d4fd7027212271de"):
+    def Package_params(self,params = {},token = "",signature = ""):
         parameters = {}
         parameters["admin"] = self.admin
         parameters["signature"] = signature
         parameters["timestamp"] = int(time.time()*1000)
         parameters["params"] = params
+        parameters["token"] = token
 
         return parameters
 
 
 if __name__ == "__main__":
     url = "http://119.23.132.26:8092/meeting/getLive"
-    parameter = Parameter().get_params()
+    parameter = Parameter().Package_params()
 
     post = requests.post(url,parameter)
     print(post.json())

@@ -1,12 +1,13 @@
 # coding :utf-8
 
 import requests
-from HuShi.Config import Environment
-from HuShi.Public.parameter import Parameter
+from HuShi.Config.env_config import Environment
+import HuShi.Config.params_config
+from HuShi.Common.package_params import Parameter
 
 class Login:
 
-    def __init__(self,unionId,openId,accessToken = "11_MEY6Ubmfc6qcuz-W1Q7BYOcvXJp7dobyKYiQgJxtU0SA8f25edJTh4pKe9GZus7n102m9Jx7ivN0LqWz1wELlYDTeIjONYOx2XyLdv3JYOw",systemName = "Android|8681-A01;5.1;22"):
+    def __init__(self,unionId,openId,accessToken,systemName = "Android|8681-A01;5.1;22"):
 
         self.openId = openId
         self.unionId = unionId
@@ -22,16 +23,16 @@ class Login:
         params["systemName"] = self.systemName
 
         # 组装参数
-        parameters = Parameter().get_params(params)
+        parameters = Parameter().Package_params(str(params))
 
         api = "/u/loginByWechat"
         url = address + api
-        print(parameters)
+
         post = requests.post(url,parameters)
         return post.json()
 
 
 if __name__ == "__main__":
     address = Environment().Test()
-    result = Login("o1WVZwxbvXmbZDgshqyxep4KhehE","owG8P08gTbda-maVestQIW9J50Og").Login_APP(address)
+    result = Login("o1WVZwxbvXmbZDgshqyxep4KhehE","owG8P08gTbda-maVestQIW9J50Og",HuShi.Config.params_config.accessToken).Login_APP(address)
     print(result)
