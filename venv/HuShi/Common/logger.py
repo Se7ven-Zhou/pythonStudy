@@ -8,8 +8,7 @@ import time
 class Logging:
 
     def __init__(self):
-
-        self.address = os.path.split(os.getcwd())[0] + "\Logs"
+        self.address = self.address = os.path.split(os.path.dirname(__file__))[0] + "\Logs"
         self.log_name = time.strftime("%Y-%m-%d")+".txt"
         self.log_path = os.path.join(self.address,self.log_name)
 
@@ -21,38 +20,44 @@ class Logging:
             file = open(self.log_path, "w")
             file.close()
 
+        self.logger = logging.getLogger(self.log_path)
+        self.logger.setLevel(logging.DEBUG)
+        fmt = logging.Formatter("[%(levelname)s]-[%(asctime)s]-[%(module)s]--日志信息：%(message)s")
+        # 设置CMD日志
+        # sh = logging.StreamHandler()
+        # sh.setFormatter(fmt)
+        # sh.setLevel(logging.DEBUG)
+        # 设置文件日志
+        fh = logging.FileHandler(self.log_path, encoding="utf-8")
+        fh.setFormatter(fmt)
+        fh.setLevel(logging.DEBUG)
 
-    def Get_Error(self,message):
+        # self.logger.addHandler(sh)
+        self.logger.addHandler(fh)
 
-        logger = logging.getLogger("Interface_Auto_Error")  # 创建日志收集器
-        fh = logging.FileHandler(self.log_path, encoding="utf-8")  # 创建日志输出渠道
-        logger.addHandler(fh)  # 收集器添加输出渠道
-        # 创建输出格式
-        formatter = logging.Formatter("[%(levelname)s]-[%(asctime)s]-[%(filename)s]-[%(module)s]-[%(funcName)s]--日志信息：%(message)s")
-        fh.setFormatter(formatter)
+    def Debug(self, message):
+        self.logger.debug(message)
 
-        logger.error(message) # 输出内容
-        logger.removeFilter(fh)
+    def Info(self, message):
+        self.logger.info(message)
 
+    def Warning(self, message):
+        self.logger.warn(message)
 
-    def Get_Info(self,message):
+    def Error(self, message):
+        self.logger.error(message)
 
-        logger = logging.getLogger("Interface_Auto_Info")  # 创建日志收集器
-        fh = logging.FileHandler(self.log_path, encoding="utf-8")  # 创建日志输出渠道
-        logger.addHandler(fh)  # 收集器添加输出渠道
-        # 创建输出格式
-        formatter = logging.Formatter("[%(levelname)s]-[%(asctime)s]-[%(filename)s]-[%(module)s]-[%(funcName)s]--日志信息：%(message)s")
-        fh.setFormatter(formatter)
-
-        logger.info(message) # 输出内容
-        logger.removeFilter(fh)
+    def Critical(self, message):
+        self.logger.critical(message)
 
 
 if __name__ == "__main__":
-
-    Logging().Get_Info("bbb")
-    # try:
-    #     aaaa
-    # except Exception as error:
-    #     Logging().Get_Error(error)
-    #     raise
+    logger = Logging()
+    logger.debug('一个debug信息')
+    logger.info('一个info信息')
+    logger.warning('一个warning信息')
+    try:
+        Error_message
+    except Exception as error:
+        logger.error(error)
+    logger.critical('一个致命critical信息')

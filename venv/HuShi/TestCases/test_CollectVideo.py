@@ -37,16 +37,16 @@ class test_Collect_Video:
 
     def test_Search_Meeting_NoContent(self):
         params_dict = {"searchKey":"","pageNo":1,"pageSize":20}
-
-        params = Parameter().Package_params(str(params_dict),self.signature)
-        url = Environment().Test() + self.api
         try:
+            params = Parameter().Package_params(str(params_dict),signature=self.signature)
+            url = Environment().Test() + self.api
             result = requests.post(url,params,headers = self.headers)
-            assert result.json()["code"] == "2000021"
+            Logging().Info("Request:"+ url + "  Parameters:"+ str(params))
+            assert result.json()["code"] == "2000022"
         except Exception as error:
-            info = "AssertionError - " + str(result.json())
-            Logging().Get_Error(info)
+            error_info = "<AssertionError> " + str(result.json()["code"]) + "≠ 2000022, Response:" + str(result.json())
+            Logging().Error(error_info)
             raise error
 
 if __name__ == "__main__":
-    pytest.main()
+    test_Collect_Video().test_Search_Meeting_NoContent()

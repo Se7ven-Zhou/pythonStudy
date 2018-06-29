@@ -30,7 +30,7 @@ def test_Search_Meeting_Normal():
         Logging().Get_Error(info)
         raise error
 
-@pytest.mark.smoke
+# @pytest.mark.smoke
 def test_Search_Meeting_NoContent():
     api = "/meeting/search"
     signature = HuShi.Config.params_config.signature
@@ -42,20 +42,22 @@ def test_Search_Meeting_NoContent():
     try:
         result = requests.post(url,params,headers = headers)
         assert result.json()["code"] == "2000021"
+        print(result.json()["code"])
     except Exception as error:
-        info = "AssertionError - " + str(result.json()) + "==> 2000021"
-        Logging().Get_Error(info)
+        info = "AssertionError - " + str(result.json()) + "==> 2000022"
+        Logging().error(info)
         raise error
 
 
 if __name__ == "__main__":
-    report_path = os.getcwd() + "\Reports" # 测试报告地址
-
-    now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
-    report_name = "Smoke_Test" + now + ".html"
-
-    test_report_path = os.path.join(report_path,report_name)
-
-    # print(test_report_path)
-
-    pytest.main(["-m","smoke","--html",test_report_path])
+    test_Search_Meeting_NoContent()
+    # report_path = os.getcwd() + "\Reports" # 测试报告地址
+    #
+    # now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
+    # report_name = "Smoke_Test" + now + ".html"
+    #
+    # test_report_path = os.path.join(report_path,report_name)
+    #
+    # # print(test_report_path)
+    #
+    # pytest.main(["-m","smoke","--html",test_report_path])
