@@ -27,10 +27,10 @@ def test_Search_Meeting_Normal():
         assert result.json()["code"] == "1"
     except Exception as error:
         info = "AssertionError - " + str(result.json()) + "==> 1"
-        Logging().Get_Error(info)
+        Logging().Error(info)
         raise error
 
-# @pytest.mark.smoke
+@pytest.mark.smoke
 def test_Search_Meeting_NoContent():
     api = "/meeting/search"
     signature = HuShi.Config.params_config.signature
@@ -42,10 +42,9 @@ def test_Search_Meeting_NoContent():
     try:
         result = requests.post(url,params,headers = headers)
         assert result.json()["code"] == "2000021"
-        print(result.json()["code"])
     except Exception as error:
-        info = "AssertionError - " + str(result.json()) + "==> 2000022"
-        Logging().error(info)
+        info = "AssertionError - " + str(result.json()) + "==> 2000021"
+        Logging().Error(info)
         raise error
 
 

@@ -13,6 +13,7 @@ class Run:
 
     def Run_suite(self,data):
         suite = unittest.TestSuite()
+
         # 遍历测试用例
         for item in range(0,len(data)):
             url = data[item]["url"]
@@ -22,7 +23,7 @@ class Run:
 
         now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
         path = "python" + now + ".html"
-
+        print(suite)
         with open(path, "wb+") as f:
             runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f,verbosity=2,title="HttpRequests单元测试",tester="Seven")
             runner.run(suite)

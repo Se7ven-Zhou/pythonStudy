@@ -19,7 +19,7 @@ class Requests:
         self.signature = HuShi.Config.params_config.signature
         self.token = HuShi.Config.params_config.token
         self.headers = HuShi.Config.params_config.headers
-    @pytest.mark.smoke
+
     def test_Requests(self,filename):
         # params_dict = {"searchKey": "笑话", "pageNo": 1, "pageSize": 20}
         api_list = Read_Data(filename).Get_API()
@@ -34,12 +34,14 @@ class Requests:
                 Logging().Info("Request:" + url + "  Parameters:" + str(params))
                 assert int(result.json()["code"]) == int(code_list[item])
             except Exception as error:
-                error_info = "<AssertionError> " + str(result.json()["code"]) + "≠" + str(code_list[item]) + "--Response:" + str(result.json())
+                error_info = "<AssertionError> " + str(result.json()["code"]) + "≠" + str(code_list[item]) + " <Response:" + str(result.json()) + ">"
                 Logging().Error(error_info)
                 raise error
+
+
 
 
 if __name__ == "__main__":
     # api = "/meeting/search"
     # params_dict = {"searchKey": "笑话", "pageNo": 1, "pageSize": 20}
-    Requests().test_Requests()
+    Requests().test_Requests("test_data.xlsx")
