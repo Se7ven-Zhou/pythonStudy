@@ -8,6 +8,7 @@ import time
 class Logging:
 
     def __init__(self):
+
         self.address = self.address = os.path.split(os.path.dirname(__file__))[0] + "\Logs"
         self.log_name = time.strftime("%Y-%m-%d")+".txt"
         self.log_path = os.path.join(self.address,self.log_name)

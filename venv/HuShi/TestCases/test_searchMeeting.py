@@ -24,13 +24,11 @@ class test_SearchMeeting(unittest.TestCase):
         self.headers = HuShi.Config.params_config.headers
 
     def setUp(self):
-
+        pass
         # self.api = "/meeting/search"
         # self.signature = HuShi.Config.params_config.signature
         # self.token = HuShi.Config.params_config.token
         # self.headers = HuShi.Config.params_config.headers
-        print("测试开始啦")
-
 
     def test_Search_Meeting_Normal(self):
         params_dict = {"searchKey":"joke","pageNo":1,"pageSize":20}
@@ -38,9 +36,9 @@ class test_SearchMeeting(unittest.TestCase):
         params = Parameter().Package_params(str(params_dict),self.token,self.signature)
         url = Environment().Test() + self.api
         try:
-            result = requests.post(url,params,headers = self.headers)
+            result = requests.post(url,params,headers =  self.headers)
             Logging().Info("Request:"+ url + "  Parameters:"+ str(params))
-            self.assertEqual(result.json()["code"],str(1),"断言错误")
+            self.assertEqual(result.json()["code"],str(1),"断言错误，状态码错啦！！")
         except Exception as error:
             error_info = "<AssertionError> " + str(result.json()["code"]) + "≠ 1, Response:" + str(result.json())
             Logging().Error(error_info)
@@ -54,12 +52,12 @@ class test_SearchMeeting(unittest.TestCase):
         try:
             result = requests.post(url,params,headers = self.headers)
             Logging().Info("Request:"+ url + "  Parameters:"+ str(params))
-            self.assertEqual(result.json()["code"],2000021,"断言错误")
+            self.assertEqual(result.json()["code"],2000022,"断言错误:状态码错啦！")
 
-            # assert result.json()["code"] == "2000022"
         except Exception as error:
             error_info = "<AssertionError> " + str(result.json()["code"]) + "≠ 2000021, Response:" + str(result.json())
             Logging().Error(error_info)
+            raise error
 
     def tearDown(self):
 
@@ -67,8 +65,14 @@ class test_SearchMeeting(unittest.TestCase):
 
 if __name__ == "__main__":
 
-    unittest.main()
+    # unittest.main()
+    # test_SearchMeeting().test_Search_Meeting_Normal()
+    suite = unittest.TestSuite()
+    loader = unittest.TestLoader()
 
+    # suite.addTest(test_SearchMeeting("test_Search_Meeting_NoContent"))
+    suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
+    print(suite)
 
 
 

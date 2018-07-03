@@ -2,7 +2,7 @@
 
 import os
 from openpyxl import load_workbook
-from openpyxl import workbook
+from openpyxl import Workbook
 
 
 class Read_Data:
@@ -48,12 +48,34 @@ class Read_Data:
         file.close()
         return code_list
 
+    def Get_name(self):
+        path = os.path.join(self.address, self.filename)
+        file = load_workbook(path)
+        sheet = file.get_sheet_by_name("meeting_info")
+
+        name_list = []
+        for item in range(2,sheet.max_row + 1):
+            name = sheet.cell(row = item,column = 4).value
+            name_list.append(name)
+        file.close()
+        return name_list
+
+    def Get_MaxRow(self):
+        path = os.path.join(self.address, self.filename)
+        file = load_workbook(path)
+        sheet = file.get_sheet_by_name("meeting_info")
+
+        MaxRow = sheet.max_row
+
+        return MaxRow
+
 if __name__ == "__main__":
 
-    xx = Read_Data("test_data.xlsx").Get_Params()
-    yy = Read_Data("test_data.xlsx").Get_API()
-    zz = Read_Data("test_data.xlsx").Get_Code()
-    print(xx[1],yy[1],zz[1])
+    # xx = Read_Data("test_data.xlsx").Get_Params()
+    # yy = Read_Data("test_data.xlsx").Get_API()
+    # zz = Read_Data("test_data.xlsx").Get_Code()
+    tt = Read_Data("test_data.xlsx").Get_MaxRow()
+    print(tt)
 
 
 
