@@ -24,11 +24,8 @@ class test_SearchMeeting(unittest.TestCase):
         self.headers = HuShi.Config.params_config.headers
 
     def setUp(self):
-        pass
-        # self.api = "/meeting/search"
-        # self.signature = HuShi.Config.params_config.signature
-        # self.token = HuShi.Config.params_config.token
-        # self.headers = HuShi.Config.params_config.headers
+
+        print("***************** Begin *******************")
 
     def test_Search_Meeting_Normal(self):
         params_dict = {"searchKey":"joke","pageNo":1,"pageSize":20}
@@ -61,18 +58,18 @@ class test_SearchMeeting(unittest.TestCase):
 
     def tearDown(self):
 
-        print("测试结束啦！！！")
+        print("***************** End *******************")
 
 if __name__ == "__main__":
 
-    # unittest.main()
-    # test_SearchMeeting().test_Search_Meeting_Normal()
-    suite = unittest.TestSuite()
-    loader = unittest.TestLoader()
-
-    # suite.addTest(test_SearchMeeting("test_Search_Meeting_NoContent"))
-    suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
-    print(suite)
+    unittest.main()
+    # # test_SearchMeeting().test_Search_Meeting_Normal()
+    # suite = unittest.TestSuite()
+    # loader = unittest.TestLoader()
+    #
+    # # suite.addTest(test_SearchMeeting("test_Search_Meeting_NoContent"))
+    # suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
+    # print(suite)
 
 
 
