@@ -12,3 +12,14 @@ SeekBar 拖动条
 """
 
 from appium import webdriver
+
+# 设备信息
+desired_caps = {}
+desired_caps["deviceName"] = "Android Emulator"
+desired_caps["platformName"] = "Android"
+desired_caps["platformVersion"] = "4.4.2"
+desired_caps["appPackage"] = "com.hushi.video"
+desired_caps["appWaitActivity"] = ".activity.MainActivity"
+
+# 链接appium server
+driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_caps)
