@@ -14,6 +14,4 @@ if __name__ == "__main__":
 
     test_report_path = os.path.join(report_path,report_name)
 
-    # print(test_report_path)
-
     pytest.main(["-m","smoke","--html",test_report_path])
