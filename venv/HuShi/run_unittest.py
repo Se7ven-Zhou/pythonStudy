@@ -1,5 +1,6 @@
 # coding:utf-8
 
+import sys
 import os
 import time
 import unittest
@@ -28,3 +29,4 @@ if __name__ == "__main__":
     with open(report_path, "wb+") as f:
         runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="Requests_AutoTest", tester="Seven")
         runner.run(suite)
+
