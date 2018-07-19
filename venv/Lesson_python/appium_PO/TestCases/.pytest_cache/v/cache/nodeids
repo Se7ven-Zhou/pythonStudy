@@ -1,0 +1,4 @@
+[
+  "test_login.py::Login_test::test_login_success",
+  "test_login_pytest1.py::Test_login::()::test_login_success"
+]
