@@ -6,13 +6,14 @@ import HomeWork.Appium_Video.Config.device_info
 import HomeWork.Appium_Video.Config.account_info
 from HomeWork.Appium_Video.Common.base_function import Base_function
 from HomeWork.Appium_Video.Common.logger import Logging
+from HomeWork.Appium_Video.Common.base_driver import Base_Driver
 import unittest
 
 class Test_login(unittest.TestCase):
 
     def setUp(self):
 
-        print("***********************Start*********************")
+        self.driver = Base_Driver().driver
 
     def tearDown(self):
 
@@ -21,7 +22,6 @@ class Test_login(unittest.TestCase):
     def __init__(self,methodName):
 
         super(Test_login, self).__init__(methodName)
-        self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub",HomeWork.Appium_Video.Config.device_info.desired_caps)
 
     def test_login_normal(self):
         mobile = "13752852018"
@@ -46,13 +46,13 @@ class Test_login(unittest.TestCase):
 
 if __name__ == "__main__":
 
-    # unittest.main()
-    suite = unittest.TestSuite()
-    runner = unittest.TextTestRunner
-    # loader = unittest.TestLoader()
-    # suite.addTest(loader.loadTestsFromTestCase(Test_login))
-    suite.addTest(Test_login("test_login_wrongAccount"))
-    print(suite)
-    runner.run(suite)
+    unittest.main()
+    # suite = unittest.TestSuite()
+    # runner = unittest.TextTestRunner
+    # # loader = unittest.TestLoader()
+    # # suite.addTest(loader.loadTestsFromTestCase(Test_login))
+    # suite.addTest(Test_login("test_login_wrongAccount"))
+    # print(suite)
+    # runner.run(suite)
 
 
