@@ -42,7 +42,7 @@ class Test_login(unittest.TestCase):
         password = "123456"
         Login_page(self.driver).login_function(mobile,password)
         error_messsage = Base_function(self.driver).Find_element(locator=Login_page.login_wrong_id).text
-        assert error_messsage == "用户名密码不匹配",Logging().Error("用例失败，提示信息："+ error_messsage)
+        assert error_messsage == "用户名密码不配",Logging().Error("用例失败，提示信息："+ error_messsage)
 
 if __name__ == "__main__":
 
