@@ -5,11 +5,12 @@ from openpyxl import Workbook
 from openpyxl import load_workbook
 from HuShi.Common.readData import Read_Data
 
+
 class WriteReport:
 
     def __init__(self):
 
-        self.address = self.address = os.path.split(os.path.dirname(__file__))[0] + "\TestDatas"
+        self.address = self.address = os.path.split(os.path.dirname(__file__))[0] + "\Reports"
         self.report_name = "test_result.xlsx"
         self.report_path = os.path.join(self.address,self.report_name)
 

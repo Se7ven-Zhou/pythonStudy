@@ -21,6 +21,8 @@ class Requests:
         self.token = HuShi.Config.params_config.token
         self.headers = HuShi.Config.params_config.headers
 
+
+
     def test_Requests(self,filename):
 
         api_list = Read_Data(filename).Get_API()

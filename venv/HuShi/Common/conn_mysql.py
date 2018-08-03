@@ -13,7 +13,7 @@ class Conn_MySQL:
         self.db_username = HuShi.Config.mysql_config.username
         self.db_pwd = HuShi.Config.mysql_config.password
 
-    def Connect(self,sql):
+    def Connect(self,sql,datas=None):
         try:
             conn = pymysql.Connect(self.db_ip,self.db_username,self.db_pwd,self.db_tableName,self.db_port,charset="utf8mb4",cursorclass=pymysql.cursors.DictCursor)
         except:
@@ -21,7 +21,11 @@ class Conn_MySQL:
 
         # 创建游标
         cousor = conn.cursor()
-        rows = cousor.execute(sql)
+        try:
+            rows = cousor.execute(sql)
+        except:
+            conn.rollback() # 事务回滚
+
         conn.close()
 
         return cousor.fetchall()
