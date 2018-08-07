@@ -15,6 +15,7 @@ import ddt
 
 data_ddt = Read_Data_ddt("test_data_ddt.xlsx").Get_Data()
 
+
 @ddt.ddt
 class Requests(unittest.TestCase):
 
@@ -27,18 +28,23 @@ class Requests(unittest.TestCase):
 
     @ddt.data(*data_ddt)
     def test_Requests(self,data):
-        n=1
-        n+=1
+
+        WriteReport().Creat_Report()
         params = Parameter().Package_params(data["params"], signature=self.signature)
         url = Environment().Test() + data["api"]
-        # 请求
-        result = requests.request(data["method"],url,params=params,headers=self.headers)
-        Logging().Info("Request:" + url + "  Parameters:" + str(params))
-        assert int(result.json()["code"]) == data["code"], WriteReport().Write_Report(data["name"], data["api"], data["params"], data["code"],str(result.json()))
-        # except Exception as error:
-        #     error_info = "<AssertionError> " + str(result.json()["code"]) + "≠" + str(code_list[item]) + " <Response:" + str(result.json()) + ">"
-        #     Logging().Error(error_info)
-        #     raise error
+
+        try:
+            # 请求
+            result = requests.request(data["method"],url,params=params,headers=self.headers)
+            Logging().Info("< Request:" + url + " >< Parameters:" + str(params) +" >< Respose: "+ str(result.json()))
+            # 获取报告行数
+            n = WriteReport().Get_MaxRow()
+
+            assert int(result.json()["code"]) == data["code"], WriteReport().Write_Report(n+1,data["name"], data["api"], data["params"], data["code"],str(result.json()))
+        except Exception as error:
+            error_info = "<AssertionError> " + str(result.json()["code"]) + "≠" + str(data["code"]) + " <Response:" + str(result.json()) + ">"
+            Logging().Error(error_info)
+            raise error
 
 if __name__ == "__main__":
 
