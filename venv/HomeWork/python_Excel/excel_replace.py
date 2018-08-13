@@ -32,22 +32,26 @@ class Excel_Datas:
             request_Data = {}
             request_Data["api"] = self.caseData_sheet.cell(row=item, column=1).value
             request_Data["params"] = self.caseData_sheet.cell(row=item, column=2).value
+            # 循环遍历，监测到占位符就替换
+            for key,value in init_data.items():
+                if request_Data["params"].find(key):
+                    request_Data["params"] = request_Data["params"].replace(str(key),str(value))
 
-            for key,valie in range init_data.
-                if request_Data["params"].find
-
-            # request_Data_list.append(request_Data)
+            request_Data_list.append(request_Data)
         print(request_Data_list)
 
     def update_initData(self):
 
-        pass
-
+        self.initData_sheet.cell(row=1,column=2).value  = self.initData_sheet.cell(row=1,column=2).value + 3
+        self.file.save(self.file_path)
     def save_file(self):
 
-        self.file.save()
+        self.file.save(self.file_path)
 
 if __name__ == "__main__":
 
-    result = Excel_Datas().get_data()
+    # Excel_Datas().get_data()
+    Excel_Datas().update_initData()
+    # Excel_Datas().get_data()
+    # Excel_Datas().save_file()
     # print(result)
