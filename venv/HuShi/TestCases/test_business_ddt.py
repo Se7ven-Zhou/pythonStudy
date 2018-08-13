@@ -16,14 +16,14 @@ import ddt
 data_ddt = Read_Data_ddt("test_data_ddt.xlsx").Get_Data()
 
 @ddt.ddt
-class Requests(unittest.TestCase):
+class test_Requests(unittest.TestCase):
 
     def __init__(self,method):
-        super(Requests, self).__init__(method)
+        super(test_Requests, self).__init__(method)
         self.headers = HuShi.Config.params_config.headers
 
     @ddt.data(*data_ddt)
-    def test_Requests(self,data):
+    def test_requests(self,data):
 
         WriteReport().Creat_Report()
         url = Environment().Test() + data["api"]

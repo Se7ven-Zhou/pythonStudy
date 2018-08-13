@@ -11,6 +11,8 @@ from HuShi.Config.env_config import Environment
 from HuShi.Common.logger import Logging
 from HuShi.TestCases import test_searchMeeting
 from HuShi.TestCases.test_searchMeeting import test_SearchMeeting
+from HuShi.TestCases import test_business_ddt
+# from HuShi.TestCases.test_business_ddt import test_Requests
 
 if __name__ == "__main__":
 
@@ -20,7 +22,7 @@ if __name__ == "__main__":
     testcase_path = os.getcwd() + "/TestCases" # 测试用例路径
 
     # suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
-    suite.addTest(loader.loadTestsFromModule(test_searchMeeting))
+    suite.addTest(loader.loadTestsFromModule(test_business_ddt))
 
     now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
     report_address = os.getcwd() + "\Reports"
