@@ -10,11 +10,18 @@ expected_data = '{"code":"1","result":{.*今日新增预告0场.*}}'
 # json = {"startTime":"22","endTime":"22"}
 json = {}
 #  test = requests.request("POST",url,json=json,headers=header)
-test = requests.post(url,json=json,headers=headers)
+test = requests.request("POST",url,json=json,headers=headers)
+a = "abc"
+b = "xyz"
 try:
-    assert test.json()["code"] == "1" ,print("断言失败")
+    assert test.json()["code"] == "1",print(a)
 except Exception as error:
-    print("断言失败2")
+    print("断言失败3")
+    if test.json()["status"] == 500:
+        a = "xyz"
+        print(a)
+        print("断言失败4")
+        print("断言失败5")
     raise error
 """正则匹配"""
 # if re.match(expected_data,test.text) is not None:  # 可用self.assertIsNotNone()方法

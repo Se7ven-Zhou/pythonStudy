@@ -18,7 +18,7 @@ class KeyIssue:
                   "dnd-dropzone":"",
                   "issuelinks	issuelinks":"",
                   "issuelinks-linktype":"blocks",
-                  "assignee":"zhouj",
+                  "assignee":"zhangwj",
                   "customfield_10101":"",
                   "fieldsToRetain":"project",
                   "fieldsToRetain":"issuetype",
