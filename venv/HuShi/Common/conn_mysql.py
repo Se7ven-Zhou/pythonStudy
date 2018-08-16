@@ -28,12 +28,12 @@ class Conn_MySQL:
 
         conn.close()
 
-        return cousor.fetchall()
+        return cousor.fetchone()
 
 if __name__ == "__main__":
-    sql = "select id,nickname from edu_user WHERE id in (206660,206667)"
+    sql = "select sex from edu_user WHERE id = 206660"
     result = Conn_MySQL().Connect(sql)
-    print(result)
+    print(str(result))
 
 
 # # 查询语句

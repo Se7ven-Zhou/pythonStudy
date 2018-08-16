@@ -30,7 +30,7 @@ class WriteReport:
             sheet.cell(row=1, column=1).value = "Name"
             sheet.cell(row=1, column=2).value = "Api"
             sheet.cell(row=1, column=3).value = "Params"
-            sheet.cell(row=1, column=4).value = "Code"
+            sheet.cell(row=1, column=4).value = "Check"
             sheet.cell(row=1, column=5).value = "Response"
             sheet.cell(row=1, column=6).value = "Result"
 

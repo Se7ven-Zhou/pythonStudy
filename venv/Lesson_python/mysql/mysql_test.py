@@ -26,17 +26,18 @@ rows = cousor.execute(select_sql) # 影响的多少行
 # fetchall() 多条数据用它
 result = cousor.fetchall()
 print(result)
+print(rows)
 
 
-# 添加一条数据
-add_sql = "insert into edu_user xxx VALUE('xxx','xxx')"
-try:
-    row = cousor.execute(add_sql)
-    conn.commit()
-except:
-    conn.rollback() # 如果失败，事务回滚
-
-conn.close()
+"""添加一条数据"""
+# add_sql = "insert into edu_user xxx VALUE('xxx','xxx')"
+# try:
+#     row = cousor.execute(add_sql)
+#     conn.commit()
+# except:
+#     conn.rollback() # 如果失败，事务回滚
+#
+# conn.close()
 
 """
 列表，元祖：%s 代替

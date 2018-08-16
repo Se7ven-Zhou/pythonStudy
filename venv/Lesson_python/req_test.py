@@ -7,22 +7,17 @@ url = "http://business-dev.veehui.com/m/getLiveOrPreviewMeetingCount"
 headers = {"Content-Type":"application/json"}
 # json = {"startTime":"2019-01-01 00:00:00","endTime":"2018-12-31 23:59:59"}
 expected_data = '{"code":"1","result":{.*今日新增预告0场.*}}'
-# json = {"startTime":"22","endTime":"22"}
-json = {}
+json = {"startTime":"2019-01-01","endTime":"2018-12-31"}
+# json = {}
 #  test = requests.request("POST",url,json=json,headers=header)
 test = requests.request("POST",url,json=json,headers=headers)
-a = "abc"
-b = "xyz"
+
 try:
-    assert test.json()["code"] == "1",print(a)
+    assert test.json()["code"] == "1",print("断言失败3")
 except Exception as error:
-    print("断言失败3")
-    if test.json()["status"] == 500:
-        a = "xyz"
-        print(a)
-        print("断言失败4")
-        print("断言失败5")
-    raise error
+    print("断言失败4")
+
+
 """正则匹配"""
 # if re.match(expected_data,test.text) is not None:  # 可用self.assertIsNotNone()方法
 #     print("匹配成功")

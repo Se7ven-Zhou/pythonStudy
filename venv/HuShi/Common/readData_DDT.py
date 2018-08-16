@@ -27,11 +27,13 @@ class Read_Data_ddt():
         params_list = []
         for item in range(2, self.sheet.max_row + 1):
             data_dict = {}
-            data_dict["api"] = self.sheet.cell(row=item, column=1).value
-            data_dict["method"] = self.sheet.cell(row=item, column=2).value
-            data_dict["params"] = self.sheet.cell(row=item, column=3).value
-            data_dict["code"] = self.sheet.cell(row=item, column=4).value
-            data_dict["name"] = self.sheet.cell(row=item, column=5).value
+            data_dict["name"] = self.sheet.cell(row=item, column=1).value
+            data_dict["api"] = self.sheet.cell(row=item, column=2).value
+            data_dict["method"] = self.sheet.cell(row=item, column=3).value
+            data_dict["params"] = self.sheet.cell(row=item, column=4).value
+            data_dict["code"] = self.sheet.cell(row=item, column=5).value
+            data_dict["check"] = self.sheet.cell(row=item, column=6).value
+            data_dict["is_check"] = self.sheet.cell(row=item, column=7).value
             params_list.append(data_dict)
         self.file.close()
         return params_list
@@ -39,5 +41,5 @@ class Read_Data_ddt():
 
 if __name__ == "__main__":
 
-    result = Read_Data_ddt("test_data.xlsx").Get_Data()
-    print(result)
+    result = Read_Data_ddt("test_data_ddt.xlsx").Get_Data()
+    print(type(result[0]["is_check"]))
