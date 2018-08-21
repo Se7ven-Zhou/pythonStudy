@@ -44,7 +44,7 @@ class test_Requests(unittest.TestCase):
             except:
                 WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], str(check_data), result.text)
                 # Jira提交BUG
-                KeyIssue().Commit(data["api"],data["params"],result.text,str(check_data),1,sql=data["check"])
+                # KeyIssue().Commit(data["api"],data["params"],result.text,str(check_data),1,sql=data["check"])
                 error_info = "【断言错误】\t<验证值：" + str(check_data) + "\t<Response:\t" + result.text + ">"
                 Logging().Error(error_info)
                 raise
@@ -55,7 +55,7 @@ class test_Requests(unittest.TestCase):
                 # 断言错误报告
                 WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], data["code"], result.text)
                 # Jira提交BUG
-                KeyIssue().Commit(data["api"], data["params"], result.text, data["code"], 0)
+                # KeyIssue().Commit(data["api"], data["params"], result.text, data["code"], 0)
                 error_info = "【断言错误】\t<正确状态码："+ str(data["code"]) +"\t<Response:\t" + result.text + ">"
                 Logging().Error(error_info)
                 raise
@@ -63,3 +63,4 @@ class test_Requests(unittest.TestCase):
 if __name__ == "__main__":
 
     unittest.main()
+    # 正则匹配 .*"id":(/d*).*
