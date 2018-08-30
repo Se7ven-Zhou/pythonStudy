@@ -31,9 +31,9 @@ class Conn_MySQL:
         return cousor.fetchone()
 
 if __name__ == "__main__":
-    sql = "select sex from edu_user WHERE id = 206660"
+    sql = "SELECT date_format(create_time,'%Y-%m-%d %H:%i') as result FROM user_opinion WHERE user_id=47 order by create_time DESC LIMIT 1"
     result = Conn_MySQL().Connect(sql)
-    print(str(result))
+    print(str(result["result"]))
 
 
 # # 查询语句

@@ -2,9 +2,9 @@
 
 
 # 连接数据库
-ip = "119.23.132.26"
+ip = "db-dev.veehui.com"
 port = 3306
-tableName = "veehui_education"
-username = "root"
-password = "huShi!2#"
+tableName = "business"
+username = "business"
+password = "mspo@Veehui"
 

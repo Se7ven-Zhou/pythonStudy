@@ -33,21 +33,54 @@ class test_Requests(unittest.TestCase):
         # 请求
         result = requests.request(data["method"],url,json=eval(data["params"]),headers=self.headers)
         Logging().Info("<请求:\t" + url +">\t<参数:" + data["params"] +">\t<结果:"+ result.text)
+        # 当前时间
+        now = time.strftime('%Y-%m-%d %H:%M')
         # 获取报告行数
         n = WriteReport().Get_MaxRow()
+
         # 判断是否需要SQL校验
         if int(data["is_check"]) == int(1):
             # 链接数据库，查询比对数据
-            check_data = Conn_MySQL().Connect(data["check"])
+            SQL_check_data = Conn_MySQL().Connect(data["SQL_check"])
             try:
-                assert int(check_data["sex"]) == int(result.json()["code"])
+                assert str(data["check_data"]) == str(SQL_check_data["result"])
             except:
-                WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], str(check_data), result.text)
+                WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], str(SQL_check_data), result.text)
                 # Jira提交BUG
                 # KeyIssue().Commit(data["api"],data["params"],result.text,str(check_data),1,sql=data["check"])
-                error_info = "【断言错误】\t<验证值：" + str(check_data) + "\t<Response:\t" + result.text + ">"
+                error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + result.text + ">"
                 Logging().Error(error_info)
                 raise
+
+        elif int(data["is_check"]) == int(2):
+            # 链接数据库，查询比对数据
+            SQL_check_data = Conn_MySQL().Connect(data["SQL_check"])
+            try:
+                assert str(SQL_check_data["result"]) == str(result.json()["result"][data["check_data"]])
+            except:
+                WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], str(SQL_check_data),
+                                           result.text)
+                # Jira提交BUG
+                # KeyIssue().Commit(data["api"],data["params"],result.text,str(check_data),1,sql=data["check"])
+                error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + result.text + ">"
+                Logging().Error(error_info)
+                raise
+
+        elif int(data["is_check"]) == int(3):
+            # 链接数据库，查询比对数据
+            SQL_check_data = Conn_MySQL().Connect(data["SQL_check"])
+            try:
+                # 传值当前时间，用于比对
+                data["check_data"] = now
+                assert str(data["check_data"]) == str(SQL_check_data["result"])
+            except:
+                WriteReport().Write_Report(n + 1, data["name"], data["api"], data["params"], str(SQL_check_data), result.text)
+                # Jira提交BUG
+                # KeyIssue().Commit(data["api"],data["params"],result.text,str(check_data),1,sql=data["check"])
+                error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + result.text + ">"
+                Logging().Error(error_info)
+                raise
+
         else:
             try:
                 assert result.json()["code"] == str(data["code"])
