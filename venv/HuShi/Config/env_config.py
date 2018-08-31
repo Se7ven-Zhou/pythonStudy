@@ -7,7 +7,7 @@ class Environment:
        pass
 
     def Test(self):
-        ip = "http://business-dev.veehui.com"
+        ip = "http://apigw-dev.veehui.com"
         port = "80"
         url = ip + ":" + port
         return url

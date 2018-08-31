@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
     report_address = os.getcwd() + "\Reports"
-    report_name = "python_unittest_" + now + ".html"
+    report_name = "接口自动化测试" + now + ".html"
     report_path = os.path.join(report_address,report_name)
     print(report_path)
     with open(report_path, "wb+") as f:

@@ -18,20 +18,21 @@ now = time.strftime('%Y-%m-%d %H:%M')
 
 
 url = "http://business-dev.veehui.com/u/coinCount/47"
-# URL = "http://apigw-dev.veehui.com/api/v1/a/login"
-headers = {"Content-Type":"application/json",
-           "Authorization":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMVdWWnd6WW9IZTE1cFVtQk5ydWZLXzJzclU0IiwiZXhwIjoxNTM1NjM0MDkzLCJpYXQiOjE1MzU2MTk2OTN9.9uGzGMUFLmTU5J5sWBMtsRkZBMNko-sH-je0yD75FdJQpuw8W5Q7FBtnC5gVQ-Bu5P_gQ2hq_CmjT6Si759OBw"}
+URL = "http://apigw-dev.veehui.com/api/v1/a/login"
+headers = {"Content-Type":"application/json"
+           # "Authorization":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMVdWWnd6WW9IZTE1cFVtQk5ydWZLXzJzclU0IiwiZXhwIjoxNTM1Njg4NjcxLCJpYXQiOjE1MzU2ODE0NzF9.YII4h2qmyAYMw5mB8-EnrNvtL0MYy1KPYnD5cGsc43I1ZM1aXXiMva9oS3APhiwOIaIwFB9_7t9JV7uLGe_vWA"
+            }
 
-# params = {
-# 	"openId" : "owG8P0zqohD5juSchr0oNYbrQz9k",
-# 	"unionId" : "o1WVZwzYoHe15pUmBNrufK_2srU4",
-# 	"accessToken": "13_MdXUEG4tbSDKx1x0ZUvYWAHqVzbWXmeJz-5LbAdDyZ95kExcf3zrkMsTEskwsOJ16x9smLaZ_k-XOGeuGEUeIc1lrwYrqG4gUbO7lML6vko",
-# 	"systemName": "ios11"
-#     }
+params = {
+	"openId" : "owG8P0zqohD5juSchr0oNYbrQz9k",
+	"unionId" : "o1WVZwzYoHe15pUmBNrufK_2srU4",
+	"accessToken": "13_MdXUEG4tbSDKx1x0ZUvYWAHqVzbWXmeJz-5LbAdDyZ95kExcf3zrkMsTEskwsOJ16x9smLaZ_k-XOGeuGEUeIc1lrwYrqG4gUbO7lML6vko",
+	"systemName": "ios11"
+    }
 
 params = {}
 
-result = requests.request("GET",url,json=params,headers = headers)
+result = requests.request("GET",URL,json=params,headers = headers)
 
 print(result.json())
 

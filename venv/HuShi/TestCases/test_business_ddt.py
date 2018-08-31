@@ -29,7 +29,7 @@ class test_Requests(unittest.TestCase):
 
         WriteReport().Creat_Report()
         url = Environment().Test() + data["api"]
-
+        time.sleep(1)
         # 请求
         result = requests.request(data["method"],url,json=eval(data["params"]),headers=self.headers)
         Logging().Info("<请求:\t" + url +">\t<参数:" + data["params"] +">\t<结果:"+ result.text)
