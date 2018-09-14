@@ -17,24 +17,21 @@ now = time.strftime('%Y-%m-%d %H:%M')
 #     print(False)
 
 
-url = "http://business-dev.veehui.com/u/coinCount/47"
-URL = "http://apigw-dev.veehui.com/api/v1/u/userStatistics"
-headers = {"Content-Type":"application/json",
-           "Authorization":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMVdWWnd6WW9IZTE1cFVtQk5ydWZLXzJzclU0IiwiZXhwIjoxNTM1NzAxNzg5LCJpYXQiOjE1MzU2OTQ1ODl9.7-sUv_PpdSUmlcOAuexQ_s9k6zHlOH-gFrERHS9XKRLCyezFnvGfnKCaBre1-LQV8751Lb6ueaKg4W0GRl2mig"
+url = "http://apigw-dev.veehui.com/api/v1/u/userStatistics"
+URL = "http://apigw-dev.veehui.com/api/v1/m/liveOrPreviewMeetingCount"
+
+headers = {"Content-Type":"application/json"
+        # "Authorization":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJvMVdWWnd6WW9IZTE1cFVtQk5ydWZLXzJzclU0IiwiZXhwIjoxNTM4NzkxOTcyLCJpYXQiOjE1MzYxOTk5NzJ9.PtqFgmpodwkaXpE_lcqcn66w3E32fPrehseKzORGAxQ-jwbfW-zkMjkYIGlscCxeaW5cdpI5i7Fj9KOaNfIgcw"
             }
 
-# params = {
-# 	"openId" : "owG8P0zqohD5juSchr0oNYbrQz9k",
-# 	"unionId" : "o1WVZwzYoHe15pUmBNrufK_2srU4",
-# 	"accessToken": "13_MdXUEG4tbSDKx1x0ZUvYWAHqVzbWXmeJz-5LbAdDyZ95kExcf3zrkMsTEskwsOJ16x9smLaZ_k-XOGeuGEUeIc1lrwYrqG4gUbO7lML6vko",
-# 	"systemName": "ios11"
-#     }
-
-params = {}
-
-result = requests.request("GET",URL,json=params,headers = headers)
+params =  {"startTime" : "2018-01-01 00:00:00","endTime" : "2018-12-31 23:59:59"}
+# params = {}
+result = requests.request("POST",URL,json=params,headers = headers)
 
 print(result.json())
+
+
+
 
 
 
