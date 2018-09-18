@@ -8,13 +8,16 @@ import unittest
 import HuShi.Config.params_config
 import HTMLTestRunnerNew
 from HuShi.Config.env_config import Environment
+from HuShi.Common.cleanDada import CleanData
 from HuShi.Common.logger import Logging
 from HuShi.TestCases import test_searchMeeting
 from HuShi.TestCases.test_searchMeeting import test_SearchMeeting
 from HuShi.TestCases import test_business_ddt
-# from HuShi.TestCases.test_business_ddt import test_Requests
 
 if __name__ == "__main__":
+    # 初始化账号
+    sql = "DELETE FROM user_operation_record WHERE user_id=58 AND operation_type_code=02 order by create_time DESC LIMIT 1"
+    CleanData().InitData(sql)
 
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
@@ -32,4 +35,3 @@ if __name__ == "__main__":
     with open(report_path, "wb+") as f:
         runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="Requests_AutoTest", tester="Seven")
         runner.run(suite)
-

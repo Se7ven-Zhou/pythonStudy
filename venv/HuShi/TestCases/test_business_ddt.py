@@ -9,13 +9,13 @@ from HuShi.Config.env_config import Environment
 from HuShi.Common.writeReport import WriteReport
 from HuShi.Common.keyIssue import KeyIssue
 from HuShi.Common.conn_mysql import Conn_MySQL
-import HuShi.Config.params_config
+import HuShi.Config.params_config,HuShi.Config.testData_config
 import unittest
 import os
 import time
 import ddt
 
-data_ddt = Read_Data_ddt("test_data_ddt.xlsx").Get_Data()
+data_ddt = Read_Data_ddt(HuShi.Config.testData_config.Excel_name).Get_Data()
 
 @ddt.ddt
 class test_Requests(unittest.TestCase):

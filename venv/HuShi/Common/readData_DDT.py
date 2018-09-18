@@ -4,6 +4,7 @@ import os
 from openpyxl import load_workbook
 from openpyxl import Workbook
 from HuShi.Common.logger import Logging
+import HuShi.Config.testData_config
 
 
 class Read_Data_ddt():
@@ -20,7 +21,7 @@ class Read_Data_ddt():
             Logging().Error(error)
             raise error
 
-        self.sheet = self.file.get_sheet_by_name("meeting_info")
+        self.sheet = self.file.get_sheet_by_name(HuShi.Config.testData_config.Sheet_name)
 
     def Get_Data(self):
 
