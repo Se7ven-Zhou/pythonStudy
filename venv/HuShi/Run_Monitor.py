@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     testcase_path = os.getcwd() + "/TestCases" # 测试用例路径
 
-    # suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
     suite.addTest(loader.loadTestsFromModule(Monitor_VeehuiStudy))
 
     runner.run(suite)
+

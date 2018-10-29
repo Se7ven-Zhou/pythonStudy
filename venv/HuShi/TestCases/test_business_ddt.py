@@ -1,6 +1,7 @@
 # coding:utf-8
 
 import requests
+import urllib3
 from HuShi.Common.readData import Read_Data
 from HuShi.Common.readData_DDT import Read_Data_ddt
 from HuShi.Common.logger import Logging

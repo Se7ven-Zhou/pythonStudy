@@ -28,7 +28,6 @@ class test_Requests(unittest.TestCase):
     @ddt.data(*data_ddt)
     def test_requests(self,data):
 
-        WriteReport().Creat_Report()
         url = Environment().Test() + data["api"]
         time.sleep(0.5)
         # 请求
