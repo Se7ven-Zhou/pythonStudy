@@ -44,4 +44,4 @@ class Read_Data_ddt():
 if __name__ == "__main__":
 
     result = Read_Data_ddt("test_data_ddt.xlsx").Get_Data()
-    print(result[0]["SQL_check"])
+    print(result)
