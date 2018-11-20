@@ -96,5 +96,5 @@ class test_Requests(unittest.TestCase):
 
 if __name__ == "__main__":
 
-    # unittest.main()
+    unittest.main()
     # 正则匹配 .*"id":(/d*).*
