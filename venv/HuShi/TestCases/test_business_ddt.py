@@ -10,6 +10,8 @@ from HuShi.Config.env_config import Environment
 from HuShi.Common.writeReport import WriteReport
 from HuShi.Common.keyIssue import KeyIssue
 from HuShi.Common.conn_mysql import Conn_MySQL
+from HuShi.Common.sendMail import Send_Mail
+from HuShi.Common.getLatestReport import GetLatestReport
 import HuShi.Config.params_config,HuShi.Config.testData_config
 import unittest
 import os
@@ -97,4 +99,5 @@ class test_Requests(unittest.TestCase):
 if __name__ == "__main__":
 
     unittest.main()
+    Send_Mail().Send()
     # 正则匹配 .*"id":(/d*).*

@@ -1,0 +1,126 @@
+[ERROR]-[2018-07-23 14:00:16,224]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 14:00:16,491]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 14:00:16,491]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 14:10:06,654]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 14:10:06,757]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 14:10:06,757]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 14:10:06,758]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_ico
+[ERROR]-[2018-07-23 14:10:06,758]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_ico
+[ERROR]-[2018-07-23 14:10:06,758]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_ico
+[ERROR]-[2018-07-23 15:44:55,039]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 15:44:55,175]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 15:44:55,175]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 15:44:55,177]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_name
+[ERROR]-[2018-07-23 15:44:55,177]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_name
+[ERROR]-[2018-07-23 15:44:55,177]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_name
+[ERROR]-[2018-07-23 16:06:42,009]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 16:06:42,146]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:06:42,146]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:06:42,148]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_password
+[ERROR]-[2018-07-23 16:06:42,148]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_password
+[ERROR]-[2018-07-23 16:06:42,148]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/et_account_password
+[ERROR]-[2018-07-23 16:20:52,848]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 16:20:52,948]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:20:52,948]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:20:52,950]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:20:52,950]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:20:52,950]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:23:16,799]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 16:23:16,864]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:23:16,864]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:23:16,866]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:23:16,866]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:23:16,866]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/input_phone_num
+[ERROR]-[2018-07-23 16:26:50,591]-[logger]--日志信息：Message: 
+
+[ERROR]-[2018-07-23 16:26:50,693]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:26:50,693]-[logger]--日志信息：Message: An element could not be located on the page using the given search parameters.
+
+[ERROR]-[2018-07-23 16:26:50,695]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/btn_login_or_register
+[ERROR]-[2018-07-23 16:26:50,695]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/btn_login_or_register
+[ERROR]-[2018-07-23 16:26:50,695]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop:id/btn_login_or_register
+[ERROR]-[2018-07-23 17:52:59,042]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:52:59,050]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:52:59,050]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:52:59,052]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:52:59,052]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:52:59,052]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,060]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,060]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,060]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,060]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,067]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,067]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,067]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,067]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,067]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:53:02,069]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:00,998]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:01,007]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:01,007]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:01,009]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:01,009]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:01,009]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,024]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,024]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,024]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,024]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,034]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,034]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,034]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,034]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,034]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-23 17:57:06,035]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon

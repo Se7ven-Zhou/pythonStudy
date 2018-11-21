@@ -1,0 +1,33 @@
+[ERROR]-[2018-07-24 09:46:03,827]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:03,833]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:03,833]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:03,835]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:03,835]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:03,835]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,857]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,857]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,857]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,857]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,866]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,866]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,866]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,866]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,866]-[logger]--日志信息：Message: A session is either terminated or not started
+
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon
+[ERROR]-[2018-07-24 09:46:08,867]-[logger]--日志信息：找不到元素定位：com.xiaomi.shop.plugin.homepage:id/main_bottom_tab_mine_icon

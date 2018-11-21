@@ -1,0 +1,15 @@
+[2018-06-29 09:31:21] [DEBUG] Ò»¸ödebugÐÅÏ¢
+[2018-06-29 09:31:21] [INFO] Ò»¸öinfoÐÅÏ¢
+[2018-06-29 09:31:21] [WARNING] Ò»¸öwarningÐÅÏ¢
+[2018-06-29 09:31:21] [ERROR] Ò»¸öerrorÐÅÏ¢
+[2018-06-29 09:31:21] [CRITICAL] Ò»¸öÖÂÃücriticalÐÅÏ¢
+[2018-06-29 09:49:34] [DEBUG] Ò»¸ödebugÐÅÏ¢
+[2018-06-29 09:49:34] [INFO] Ò»¸öinfoÐÅÏ¢
+[2018-06-29 09:49:34] [WARNING] Ò»¸öwarningÐÅÏ¢
+[2018-06-29 09:49:34] [ERROR] name 'Error_message' is not defined
+[2018-06-29 09:49:34] [CRITICAL] Ò»¸öÖÂÃücriticalÐÅÏ¢
+[2018-06-29 09:53:22] [DEBUG] ä¸€ä¸ªdebugä¿¡æ¯
+[2018-06-29 09:53:22] [INFO] ä¸€ä¸ªinfoä¿¡æ¯
+[2018-06-29 09:53:22] [WARNING] ä¸€ä¸ªwarningä¿¡æ¯
+[2018-06-29 09:53:22] [ERROR] name 'Error_message' is not defined
+[2018-06-29 09:53:22] [CRITICAL] ä¸€ä¸ªè‡´å‘½criticalä¿¡æ¯

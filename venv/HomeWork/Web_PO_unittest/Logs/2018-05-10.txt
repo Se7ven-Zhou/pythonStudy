@@ -1,0 +1,1 @@
+[ERROR]-[2018-05-10 12:44:36,275]-[Web_Auto]-[mylogger.py]-[My_logger]-日志信息：name 'a' is not defined

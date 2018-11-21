@@ -4,15 +4,16 @@ from openpyxl import load_workbook
 from openpyxl import Workbook
 from urllib import request
 from prettytable import PrettyTable
+from HuShi.Common.getLatestReport import GetLatestReport
 import time,os
 from pyquery import PyQuery as pq
 
 
 class MailInfo:
 
-    def __init__(self, path):
+    def __init__(self):
 
-        self.path = path
+       self.path =  GetLatestReport().New_report()
 
     def GetErrorData(self):
         file = load_workbook(self.path)
@@ -35,7 +36,7 @@ class MailInfo:
         return (str(x))
 
 
-    def GetInfo(self, count, tester="Seven"):
+    def GetInfo(self, count, testTime, tester="Seven"):
         file = load_workbook(self.path)
         sheet = file.get_sheet_by_name("result")
 
@@ -51,22 +52,18 @@ class MailInfo:
 <h1 style="font-family: Microsoft YaHei">Requests_AutoTest</h1>
 <p class='attribute'><strong>测试人员 : </strong> Seven</p>
 <p class='attribute'><strong>测试时间 : </strong>{}</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:21.371223</p>
+<p class='attribute'><strong>合计耗时 : </strong> {:.2f}秒</p>
 <p class='attribute'><strong>测试结果 : </strong> 共 {}，通过 {}，失败 {}，通过率= {:.2%}</p>
 <p class='description'></p>
-</div>""".format(time.strftime("%Y-%m-%d %H:%M:%S"), count, count_pass, count_fail, count_passRate))
+</div>""".format(time.strftime("%Y-%m-%d %H:%M:%S"),testTime, count, count_pass, count_fail, count_passRate))
 
         file.close()
         return info
-
-    def GetAttach(self):
-        address = os.path.split(os.path.dirname(__file__))[0] + "\Reports"
-        list = os.listdir(address)
-        print(list)
 
 
 if __name__ == "__main__":
     path = "C:/Users/Administrator/PycharmProjects/pythonStudy/venv/HuShi/Reports/2018-10-24.xlsx"
     # test = Package_MailContent(path).test_info(5)
     # print(test)
-    MailInfo().GetAttach()
+    info = MailInfo().GetInfo(5,1.2333)
+    print(info)

@@ -6,6 +6,7 @@ import os
 import time
 import unittest
 import HuShi.Config.params_config
+import HuShi.Config.testData_config
 import HTMLTestRunnerNew
 from HuShi.Config.env_config import Environment
 from HuShi.Common.cleanDada import CleanData
@@ -13,6 +14,9 @@ from HuShi.Common.logger import Logging
 from HuShi.TestCases import test_searchMeeting
 from HuShi.TestCases.test_searchMeeting import test_SearchMeeting
 from HuShi.TestCases import test_business_ddt
+from HuShi.Common.sendMail import Send_Mail
+from openpyxl import load_workbook
+from openpyxl import Workbook
 
 if __name__ == "__main__":
     # 初始化账号
@@ -23,15 +27,25 @@ if __name__ == "__main__":
     loader = unittest.TestLoader()
 
     testcase_path = os.getcwd() + "/TestCases" # 测试用例路径
-
-    # suite.addTest(loader.loadTestsFromTestCase(test_SearchMeeting))
+    # 加载套件
     suite.addTest(loader.loadTestsFromModule(test_business_ddt))
-
-    now = time.strftime("%Y-%m-%d_%H_%M_%S")  # 获取当前时间
+    # 报告信息
+    startTime = time.time() # 获取当前时间
     report_address = os.getcwd() + "\Reports"
-    report_name = "接口自动化测试" + now + ".html"
+    report_name = "接口自动化测试" + time.strftime("%Y-%m-%d_%H_%M_%S") + ".html"
     report_path = os.path.join(report_address,report_name)
-    print(report_path)
+    # 开跑
     with open(report_path, "wb+") as f:
         runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="Requests_AutoTest", tester="Seven")
         runner.run(suite)
+
+    finishTime = time.time()
+
+    # 发送邮件信息
+    testTime = float(finishTime) - float(startTime)
+    filePath = os.getcwd()  +"/TestDatas/" + HuShi.Config.testData_config.Excel_name
+    file = load_workbook(filePath)
+    sheet = file.get_sheet_by_name(HuShi.Config.testData_config.Sheet_name)
+    count = sheet.max_row
+    Send_Mail().Send(count,testTime)
+    file.save(filePath)
