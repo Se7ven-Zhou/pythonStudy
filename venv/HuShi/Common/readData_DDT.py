@@ -33,7 +33,7 @@ class Read_Data_ddt():
             data_dict["method"] = self.sheet.cell(row=item, column=4).value
             data_dict["params"] = self.sheet.cell(row=item, column=5).value
             data_dict["code"] = self.sheet.cell(row=item, column=6).value
-            data_dict["is_check"] = self.sheet.cell(row=item, column=7).value
+            data_dict["checkType"] = self.sheet.cell(row=item, column=7).value
             data_dict["check_data"] = self.sheet.cell(row=item, column=8).value
             data_dict["SQL_check"] = self.sheet.cell(row=item, column=9).value
             params_list.append(data_dict)

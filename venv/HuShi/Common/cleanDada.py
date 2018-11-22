@@ -25,11 +25,12 @@ class CleanData:
         try:
             cousor.execute(sql)
             conn.commit()
+            print("********** 初始化账号成功 **********")
         except:
             conn.rollback() # 事务回滚
 
         conn.close()
-        print("********** 初始化账号成功 **********")
+
 
 if __name__ == "__main__":
     SQL = "SELECT coin_num FROM user_operation_record  WHERE user_id=58 AND operation_type_code=02 order by create_time DESC LIMIT 1"
