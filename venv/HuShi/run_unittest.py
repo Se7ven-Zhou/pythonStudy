@@ -20,8 +20,8 @@ from openpyxl import Workbook
 
 if __name__ == "__main__":
     # 初始化账号
-    sql = "DELETE FROM user_operation_record WHERE user_id=58 AND operation_type_code=02 order by create_time DESC LIMIT 1"
-    CleanData().InitData(sql)
+    # sql = "DELETE FROM user_operation_record WHERE user_id=58 AND operation_type_code=02 order by create_time DESC LIMIT 1"
+    # CleanData().InitData(sql)
 
     suite = unittest.TestSuite()
     loader = unittest.TestLoader()
@@ -36,7 +36,7 @@ if __name__ == "__main__":
     report_path = os.path.join(report_address,report_name)
     # 开跑
     with open(report_path, "wb+") as f:
-        runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="Requests_AutoTest", tester="Seven")
+        runner = HTMLTestRunnerNew.HTMLTestRunner(stream=f, verbosity=2, title="VeehuiStudy_API", tester="Seven")
         runner.run(suite)
 
     finishTime = time.time()

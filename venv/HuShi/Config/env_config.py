@@ -12,6 +12,12 @@ class Environment:
         url = ip + ":" + port
         return url
 
+    def PreOnline(self):
+        ip = "http://120.76.188.79"
+        port = "9109"
+        url = ip + ":" + port
+        return url
+
     def Online(self):
         ip = "119.23.132.26"
         port = "8091"

@@ -40,9 +40,9 @@ class Send_Mail:
             s.login(self.msg_from, self.passwd)
             s.sendmail(self.msg_from, self.msg_to, msg.as_string())
 
-            print("发送成功")
+            print("邮件发送成功")
         except s.SMTPException as e:
-            print("发送失败")
+            print("邮件发送失败")
         finally:
             s.quit()
 

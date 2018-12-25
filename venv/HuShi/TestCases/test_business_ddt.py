@@ -32,7 +32,7 @@ class test_Requests(unittest.TestCase):
     def test_requests(self,data):
 
         WriteReport().Creat_Report()
-        url = Environment().Test() + data["api"]
+        url = Environment().PreOnline() + data["api"]
         time.sleep(0.5)
         # 请求
         result = requests.request(data["method"],url,json=eval(data["params"]),headers=self.headers)
@@ -40,19 +40,22 @@ class test_Requests(unittest.TestCase):
         # 当前时间
         now = time.strftime('%Y-%m-%d %H:%M')
         # 获取报告行数
-        n = WriteReport().Get_MaxRow()
+        ReportRow = WriteReport().Get_MaxRow()
+
 
         if int(data["checkType"]) == int(1):
-            Verify(data,result,n).VerifyValue()
+            Verify(data,result,ReportRow).VerifyValue()
 
         elif int(data["checkType"]) == int(2):
-            Verify(data,result,n).VerifyData()
+            Verify(data,result,ReportRow).Verifydata()
 
         elif int(data["checkType"]) == int(3):
-            Verify(data,result,n).VerifyDataExist()
+            Verify(data,result,ReportRow).VerifydataExist()
 
         else:
-            Verify(data,result,n).VerifyCode()
+            Verify(data,result,ReportRow).VerifyCode()
+
+
 
         #
         # # 判断是否需要SQL校验
@@ -113,5 +116,5 @@ class test_Requests(unittest.TestCase):
 if __name__ == "__main__":
 
     unittest.main()
-    Send_Mail().Send()
+    # Send_Mail().Send()
     # 正则匹配 .*"id":(/d*).*

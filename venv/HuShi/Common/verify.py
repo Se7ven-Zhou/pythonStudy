@@ -19,23 +19,23 @@ import os,time
 
 class Verify:
 
-    def __init__(self, data, result,n):
+    def __init__(self, data, result,ReportRow):
 
         self.data = data
         self.result = result
-        self.n = n
+        self.ReportRow = int(ReportRow)
 
     def VerifyValue(self):
         # 链接数据库，查询比对数据
         SQL_check_data = Conn_MySQL().Connect(self.data["SQL_check"])
         try:
-            assert str(self.data["check_data"]) == str(SQL_check_self.data["result"])
+            assert str(self.data["check_data"]) == str(SQL_check_data["result"])
         except:
-            WriteReport().Write_Report(self.n + 1, self.data["name"], self.data["api"], self.data["params"],
-                                       str(SQL_check_self.data), self.result.text)
+            WriteReport().Write_Report(self.ReportRow + 1, self.data["name"], self.data["api"], self.data["params"],
+                                       str(SQL_check_data), self.result.text)
             # Jira提交BUG
             # KeyIssue().Commit(self.data["api"],self.data["params"],self.result.text,str(check_self.data),1,sql=self.data["check"])
-            error_info = "【断言错误】\t<验证值：" + str(SQL_check_self.data) + "\t<Response:\t" + self.result.text + ">"
+            error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + self.result.text + ">"
             Logging().Error(error_info)
             raise
 
@@ -43,15 +43,15 @@ class Verify:
         # 链接数据库，查询比对数据
         SQL_check_data = Conn_MySQL().Connect(self.data["SQL_check"])
         try:
-            assert str(SQL_check_self.data["result"]) == str(
+            assert str(SQL_check_data["result"]) == str(
                 self.result.json()["result"][self.data["check_data"]])
         except:
-            WriteReport().Write_Report(self.n + 1, self.data["name"], self.data["api"], self.data["params"],
-                                       str(SQL_check_self.data),
+            WriteReport().Write_Report(self.ReportRow + 1, self.data["name"], self.data["api"], self.data["params"],
+                                       str(SQL_check_data),
                                        self.result.text)
             # Jira提交BUG
             # KeyIssue().Commit(self.data["api"],self.data["params"],self.result.text,str(check_self.data),1,sql=self.data["check"])
-            error_info = "【断言错误】\t<验证值：" + str(SQL_check_self.data) + "\t<Response:\t" + self.result.text + ">"
+            error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + self.result.text + ">"
             Logging().Error(error_info)
             raise
 
@@ -61,14 +61,14 @@ class Verify:
         SQL_check_data = Conn_MySQL().Connect(self.data["SQL_check"])
         try:
             # 传值当前时间，用于比对
-            self.data["check_data"] = now
-            assert str(self.data["check_data"]) == str(SQL_check_self.data["result"])
+            self.data["check_data"] = time.strftime("%Y-%m-%d %H:%M")
+            assert str(self.data["check_data"]) == str(SQL_check_data["result"])
         except:
-            WriteReport().Write_Report(self.n + 1, self.data["name"], self.data["api"], self.data["params"],
-                                       str(SQL_check_self.data), self.result.text)
+            WriteReport().Write_Report(self.ReportRow + 1, self.data["name"], self.data["api"], self.data["params"],
+                                       str(SQL_check_data), self.result.text)
             # Jira提交BUG
             # KeyIssue().Commit(self.data["api"],self.data["params"],self.result.text,str(check_self.data),1,sql=self.data["check"])
-            error_info = "【断言错误】\t<验证值：" + str(SQL_check_self.data) + "\t<Response:\t" + self.result.text + ">"
+            error_info = "【断言错误】\t<验证值：" + str(SQL_check_data) + "\t<Response:\t" + self.result.text + ">"
             Logging().Error(error_info)
             raise
 
@@ -78,7 +78,7 @@ class Verify:
             assert self.result.json()["code"] == str(self.data["code"])
         except:
             # 断言错误报告
-            WriteReport().Write_Report(self.n + 1, self.data["name"], self.data["api"], self.data["params"], self.data["code"],
+            WriteReport().Write_Report(self.ReportRow + 1, self.data["name"], self.data["api"], self.data["params"], self.data["code"],
                                        self.result.text)
             # Jira提交BUG
             # KeyIssue().Commit(self.data["api"], self.data["params"], self.result.text, self.data["code"], 0)

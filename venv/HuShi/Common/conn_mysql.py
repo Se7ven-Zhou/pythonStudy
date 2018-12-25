@@ -31,7 +31,7 @@ class Conn_MySQL:
         return cousor.fetchone()
 
 if __name__ == "__main__":
-    sql = "SELECT date_format(create_time,'%Y-%m-%d %H:%i') as result FROM user_opinion WHERE user_id=47 order by create_time DESC LIMIT 1"
+    sql = "SELECT SUM(coin_num) as result FROM user_operation_record WHERE user_id=77777 AND coin_num>1"
     result = Conn_MySQL().Connect(sql)
     print(str(result["result"]))
 

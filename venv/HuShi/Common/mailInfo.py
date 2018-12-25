@@ -49,7 +49,7 @@ class MailInfo:
             count_passRate = int(count_pass) / int(count)
 
         info = ("""<div class='heading'>
-<h1 style="font-family: Microsoft YaHei">Requests_AutoTest</h1>
+<h1 style="font-family: Microsoft YaHei">VeehuiStudy_API</h1>
 <p class='attribute'><strong>测试人员 : </strong> Seven</p>
 <p class='attribute'><strong>测试时间 : </strong>{}</p>
 <p class='attribute'><strong>合计耗时 : </strong> {:.2f}秒</p>
